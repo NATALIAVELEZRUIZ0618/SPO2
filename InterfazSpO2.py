@@ -1,10 +1,14 @@
 """
-UAO SpO2 Simulator GUI - No Hardware Required !
+UAO SpO2 simulador, 70% - 99%
 -------------------------------------
-Created on Thu Dec 21 12:07:49 2017
-by the author: Kevin Machado Gamboa
+Basado en el autor Kevin Machado Gamboa
 Contact: ing.kevin@hotmail.com
-Modified on Sun Oct 11 10:29:39 2020
+Modificado Septiembre 2022
+
+Alexander Baquero 219325
+Nicole Iriarte Jaramillo 2190011
+Daniel Solis 2190107
+Natalia Velez Ruiz 2190103
 ------------------------------------
 REFERENCES: 
     [1] Development of a Low-Cost Pulse Oximeter Simulator for Educational Purposes
@@ -14,12 +18,12 @@ REFERENCES:
     [3] Qt for Python - https://doc.qt.io/qtforpython/
 """
 # -----------------------------------------------------------------------------
-#                             Libraries Needed
+#                             Librerias (No se modifican)
 # -----------------------------------------------------------------------------
-import sys
-from typing import Any, Union, List
+import sys # Para generar las funciones
+from typing import Any, Union, List # Se llaman esas tres funciones
 
-import numpy as np
+import numpy as np #
 from time import time
 import scipy.io as sio
 # import PCF8591v2 as ADC
