@@ -23,26 +23,26 @@ REFERENCES:
 import sys # Para generar las funciones
 from typing import Any, Union, List # Se llaman esas tres funciones
 
-import numpy as np #
-from time import time
-import scipy.io as sio
-# import PCF8591v2 as ADC
-from collections import deque
-from multiprocessing import Queue
-# Librery for the management of Qt v5. UI platform
-from PyQt5.uic import loadUi
-from PyQt5 import QtCore
-from PyQt5.QtWidgets import QApplication, QMainWindow, QSlider
+import numpy as np # Librería para hacer funciones matemáticas se llama con np
+from time import time # Para hacer las funciones en el tiempo
+import scipy.io as sio # Procesamiento de señales y gráficas
+# AQUI se cambia para el arduino  el microprocesador
+from collections import deque # modificar vectores (datos dinamicos, integrados) para las función pletismográfica
+from multiprocessing import Queue # bloquea la gráfica cuando alcanza 99%
+# Libreria para la interfaz gráfica
+from PyQt5.uic import loadUi # por defecto los cuadros, herramientas, PARA MANEJARLAS
+from PyQt5 import QtCore # por defecto los cuadros, herramientas, PARA MANEJARLAS
+from PyQt5.QtWidgets import QApplication, QMainWindow, QSlider #Para la interfaz gráfica poder modificar los slider el ususario
 
 # -----------------------------------------------------------------------------
-#                              GUI Development
+#                              Desarrollo de la interfaz
 # -----------------------------------------------------------------------------
 # @brief Buffer size for the data (number of points in the plot)
 N_SAMPLES = 100
 # @brief Update time of the plot, in ms
-PLOT_UPDATE_TIME = 1
+PLOT_UPDATE_TIME = 2
 # @brief Point to update in each redraw
-PLOT_UPDATE_POINTS = -1
+PLOT_UPDATE_POINTS = -2
 
 
 class mainWindow(QMainWindow):
