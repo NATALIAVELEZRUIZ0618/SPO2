@@ -1,4 +1,6 @@
 # Introduction
+
+Basado en la tesis de ANdres gamboa para modificarlo para arduino con fines academico
 The Open Source graphical user interface (GUI) for a SpO2 simulator, named as UAO_SpO2_Sim, it's a project that was born in 2017 in the Research Group in Biomedical Engineering, GBIO, at the Autonomous University of the West (Universidad Autónoma de Occidente), in Cali Colombia.
 
 An easy-quick review of this project could be found in the IEEExplore by the name "Development of a Low-Cost Pulse Oximeter Simulator for Educational Purposes", link:
