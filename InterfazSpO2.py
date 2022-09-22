@@ -311,3 +311,47 @@ _mainWindow = mainWindow()
 _mainWindow.show()
 # Running application
 app.exec_()
+
+
+
+
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+#Codigo Arduino 
+
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  Serial.begin(9600);
+  pinMode(13, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+
+  if(Serial.available()>0){
+  String cadena  =  Serial.readStringUntil('\n');
+  //String cadena = Serial.readString();
+  int hola = cadena.toInt();
+  if (hola == 1){  
+  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);
+  }
+  }
+                        // wait for a second
+}
+
+
+
+
+
+#Codigo Spyder
+
+import serial
+
+arduino = serial.Serial('COM3','9600') 
+arduino.write(str.encode('1'))
+arduino.close()
